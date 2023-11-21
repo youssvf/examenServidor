@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Proyectos</title>
+</head>
+<body>
+<div th:replace="~{fragments/nav}"></div>
+<h1>Proyectos</h1>
+<ul th:each="proyecto : ${proyectos}">
+    <li >
+        <a th:text="${proyecto.nombre}" th:href="@{'/proyecto/' + ${proyecto.id}}"></a>
+    </li>
+</ul>
+</body>
+</html>
